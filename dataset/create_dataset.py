@@ -13,9 +13,9 @@ class App:
                     old_dataset = np.load('/training/dataset.npy',
                                           allow_pickle=True)
                     dataset = np.vstack((dataset, old_dataset))
-                    np.save('C:\\Users\\AdminX\\PycharmProjects\\pythonProject\\pythonProject1\\training\\dataset', dataset)
+                    np.save('datasets\\', dataset)
                 except:
-                    np.save('C:\\Users\\AdminX\\PycharmProjects\\pythonProject\\pythonProject1\\training\\dataset', dataset)
+                    np.save('datasets\\', dataset)
                     print('Создан новый файл')
                 print(dataset.shape[0])
             function(self)
