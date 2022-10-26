@@ -30,22 +30,22 @@ class App:
 
         self.dataset = []
 
-        button_135 = tk.Button(self.window, text='135', width=10, height=5, command=lambda: self.save_image(4))
+        button_135 = tk.Button(self.window, text='135', width=10, height=5, command=self.save_image(4))
         button_135.place(x=450, y=10)
 
-        button_45 = tk.Button(self.window, text='45', width=10, height=5, command=lambda: self.save_image(3))
+        button_45 = tk.Button(self.window, text='45', width=10, height=5, command=self.save_image(3))
         button_45.place(x=450, y=110)
 
-        button_180 = tk.Button(self.window, text='180', width=10, height=5, command=lambda: self.save_image(2))
+        button_180 = tk.Button(self.window, text='180', width=10, height=5, command=self.save_image(2))
         button_180.place(x=350, y=10)
 
-        button_90 = tk.Button(self.window, text='90', width=10, height=5, command=lambda: self.save_image(1))
+        button_90 = tk.Button(self.window, text='90', width=10, height=5, command=self.save_image(1))
         button_90.place(x=350, y=110)
 
-        button_none = tk.Button(self.window, text='none', width=10, height=5, command=lambda: self.save_image(0))
+        button_none = tk.Button(self.window, text='none', width=10, height=5, command=self.save_image(0))
         button_none.place(x=350, y=210)
 
-        button_next = tk.Button(self.window, text='next', width=10, height=5, command=lambda: self.next_image())
+        button_next = tk.Button(self.window, text='next', width=10, height=5, command=self.next_image())
         button_next.place(x=450, y=210)
 
         self.images = np.load('images_for_dataset.npy')
