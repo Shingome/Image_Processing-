@@ -23,6 +23,6 @@ for x in range(width):
 # save image_array
 image_array = np.asarray(image_array)
 
-np.save('C:\\Users\\AdminX\\PycharmProjects\\pythonProject\\pythonProject1\\training\\image', image_array)
+np.save('../training/image', image_array)
 
 print(np.shape(image_array))

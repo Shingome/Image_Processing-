@@ -10,12 +10,12 @@ class App:
             if self.dataset:
                 dataset = np.asarray(self.dataset, dtype=object)
                 try:
-                    old_dataset = np.load('/training/dataset.npy',
+                    old_dataset = np.load('../training/dataset.npy',
                                           allow_pickle=True)
                     dataset = np.vstack((dataset, old_dataset))
-                    np.save('training/dataset.npy', dataset)
+                    np.save('../training/dataset.npy', dataset)
                 except:
-                    np.save('training/dataset.npy', dataset)
+                    np.save('../training/dataset.npy', dataset)
                     print('Создан новый файл')
                 print(dataset.shape[0])
             function(self)
