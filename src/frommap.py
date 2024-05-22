@@ -12,7 +12,7 @@ height *= step
 image = Image.new('RGB', (width, height), (255, 255, 255))
 draw = ImageDraw.Draw(image)
 
-map = np.load('map.npy')
+map = np.load('./../map.npy')
 
 print(len(map))
 

@@ -3,7 +3,7 @@ from PIL import Image
 
 
 # open image_for_dataset file
-image_for_dataset = Image.open("img_for_dataset.jpg")
+image_for_dataset = Image.open("./../img_for_dataset.jpg")
 
 # change image
 width, height = image_for_dataset.size
@@ -24,4 +24,4 @@ images_for_dateset = np.asarray(images)
 
 print(np.shape(images))
 
-np.save('images_for_dataset', images)
+np.save('./../images_for_dataset', images)

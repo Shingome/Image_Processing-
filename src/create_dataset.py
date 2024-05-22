@@ -5,20 +5,20 @@ from PIL import ImageTk, Image
 
 
 class App:
-    def save(function):
+    def save(fun):
         def saved(self):
             if self.dataset:
                 dataset = np.asarray(self.dataset, dtype=object)
                 try:
-                    old_dataset = np.load('../training/dataset.npy',
+                    old_dataset = np.load('./../dataset.npy',
                                           allow_pickle=True)
                     dataset = np.vstack((dataset, old_dataset))
-                    np.save('../training/dataset.npy', dataset)
+                    np.save('./../dataset.npy', dataset)
                 except:
-                    np.save('../training/dataset.npy', dataset)
+                    np.save('./../dataset.npy', dataset)
                     print('Создан новый файл')
                 print(dataset.shape[0])
-            function(self)
+            fun(self)
 
         return saved
 
@@ -48,7 +48,7 @@ class App:
         button_next = tk.Button(self.window, text='next', width=10, height=5, command=lambda: self.next_image())
         button_next.place(x=450, y=210)
 
-        self.images = np.load('images_for_dataset.npy')
+        self.images = np.load('./../images_for_dataset.npy')
 
         self.canvas = tk.Canvas(self.window, height=300, width=300)
         self.image_prev = self.images[rd(0, np.shape(self.images)[0])]
